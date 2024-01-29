@@ -28,10 +28,32 @@ body {
   margin: 0;
 }
 
-.header {
+.center-alignment {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border: 2px solid #609ed4;
+  outline: none;
+  border-radius: 8px;
+  font-family: "Neuropol";
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #609ed4;
+  color: #f3f5fc;
+}
+
+.header {
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   padding: 1rem 3%;
   background-color: #f3f5fc;
@@ -50,9 +72,6 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 5rem 3%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url(assets/bg-principal.jpg);
   background-size: cover;
   background-position: center;
@@ -64,9 +83,6 @@ form article {
 }
 
 .contenido form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -76,18 +92,10 @@ form article {
 }
 
 .procesar-texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 2rem;
 }
 
 .campo-vacio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   background-color: #f3f5fc;
 }
@@ -96,5 +104,50 @@ textarea {
   background-color: #f3f5fc;
   border: none;
   outline: none;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
+}
+
+textarea::placeholder {
+  font-family: "Neuropol";
+}
+
+.ingresar-texto {
+  background-color: #f3f5fc;
+  border-radius: 10px;
+  padding: 1.5rem 0;
+}
+
+.ingresar-texto > textarea + input {
+  padding: 0.75rem 2.6rem;
+}
+
+.contenido .procesar-texto {
+  border-radius: 10px;
+  padding: 1.5rem 0;
+  background-color: #f3f5fc;
+}
+
+.texto-procesado {
+  display: none;
+}
+
+.campo-vacio h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.campo-vacio p {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #609ed4;
+  text-wrap: balance;
+}
+
+.texto-procesado.active {
+  display: block;
+}
+
+.texto-procesado.active .campo-vacio {
+  display: none;
 }

@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header center-alignment">
       <a href="" class="logo"
         ><img src="assets/logo-black.svg" alt="logo MIKE.VEGA"
       /></a>
       <h1 class="titulo-principal">encriptador de texto</h1>
     </header>
     <main>
-      <section class="contenido">
-        <form>
-          <article class="ingresar-texto">
-            <textarea name="texto" id="texto" cols="50" rows="10"></textarea>
-            <input type="button" value="encriptar" />
-            <input type="button" value="desencriptar" />
+      <section class="contenido center-alignment">
+        <form class="center-alignment">
+          <article class="ingresar-texto center-alignment">
+            <textarea
+              name="texto"
+              id="texto"
+              cols="50"
+              rows="10"
+              placeholder="Ingrese el texto aqui..."
+            ></textarea>
+            <input type="button" value="encriptar" class="btn" />
+            <input type="button" value="desencriptar" class="btn" />
           </article>
-          <article class="procesar-texto">
-            <textarea name="texto" id="texto" cols="50" rows="10"></textarea>
-            <aside class="campo-vacio">
+          <article class="procesar-texto center-alignment">
+            <textarea
+              name="texto"
+              id="texto"
+              cols="50"
+              rows="10"
+              class="texto-procesado"
+            ></textarea>
+            <aside class="campo-vacio center-alignment">
               <img src="assets/candado.svg" alt="icono de candado cerrado..." />
               <h2>ningún mensaje fue encontrado</h2>
               <p>ingrese el texto a encriptar / desencriptar</p>
             </aside>
-            <input type="button" value="copiar texto" />
+            <input type="button" value="copiar texto" class="btn" />
           </article>
         </form>
       </section>
