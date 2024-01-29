@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Neuropol";
+  src: url("assets/fonts/neuropol-font/Neuropol-Regular.eot");
+  src: url("assets/fonts/neuropol-font/Neuropol-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/neuropol-font/Neuropol-Regular.woff2") format("woff2"),
+    url("assets/fonts/neuropol-font/Neuropol-Regular.woff") format("woff"),
+    url("assets/fonts/neuropol-font/Neuropol-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Neuropol";
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 3%;
+  background-color: #f3f5fc;
+}
+
+.header .logo img {
+  width: 6rem;
+}
+
+.titulo-principal {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.contenido {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(assets/bg-principal.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido form,
+form article {
+  width: 100%;
+}
+
+.contenido form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenido form article textarea {
+  width: 100%;
+  max-width: 31rem;
+}
+
+.procesar-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.campo-vacio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f3f5fc;
+}
+
+textarea {
+  background-color: #f3f5fc;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
