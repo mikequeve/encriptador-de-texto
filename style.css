@@ -33,7 +33,7 @@ body {
 }
 
 main {
-  height: 85vh;
+  min-height: 85vh;
 }
 
 .center-alignment {
@@ -46,7 +46,8 @@ main {
 .btn {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: transparent;
+  background-color: #609ed4;
+  color: #f3f5fc;
   border: 2px solid #609ed4;
   outline: none;
   border-radius: 8px;
@@ -54,16 +55,14 @@ main {
   text-transform: uppercase;
 }
 
-.btn:hover {
-  background-color: #609ed4;
-  color: #f3f5fc;
-}
-
 .none {
   display: none;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -172,6 +171,9 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 1024px) {
+  .header {
+    position: initial;
+  }
   .header .logo img {
     width: 8rem;
   }
@@ -179,6 +181,18 @@ textarea::placeholder {
   .titulo-principal {
     font-size: 1rem;
   }
+
+  .btn {
+    background-color: transparent;
+    border: 2px solid #609ed4;
+    color: #0f0e0e;
+  }
+
+  .btn:hover {
+    background-color: #609ed4;
+    color: #f3f5fc;
+  }
+
   .contenido form {
     flex-direction: row;
     align-items: start;
