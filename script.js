@@ -1,7 +1,6 @@
 const d = document;
 
-function valores(texto) {
-  d.querySelector("#texto-entrada").value = "";
+function cambiosUi(texto) {
   d.querySelector("#texto-salida").value = texto;
   d.querySelector(".texto-salida").classList.remove("none");
   d.querySelector(".campo-vacio").classList.add("none");
@@ -9,14 +8,14 @@ function valores(texto) {
 }
 
 function encriptarTexto() {
-  let $texto = d.querySelector("#texto-entrada").value,
+  let $texto = d.querySelector("#texto-entrada").value.toLowerCase(),
     textoCodificado = $texto
       .replace(/e/gi, "enter")
       .replace(/i/gi, "imes")
       .replace(/a/gi, "ai")
       .replace(/o/gi, "ober")
       .replace(/u/gi, "ufat");
-  valores(textoCodificado);
+  cambiosUi(textoCodificado);
 }
 
 function copiarTexto() {
@@ -29,12 +28,12 @@ function copiarTexto() {
 }
 
 function desencriptarTexto() {
-  let $textoCodificado = d.querySelector("#texto-entrada").value,
+  let $textoCodificado = d.querySelector("#texto-entrada").value.toLowerCase(),
     textoDesencriptado = $textoCodificado
       .replace(/enter/gi, "e")
       .replace(/imes/gi, "i")
       .replace(/ai/gi, "a")
       .replace(/ober/gi, "o")
       .replace(/ufat/gi, "u");
-  valores(textoDesencriptado);
+  cambiosUi(textoDesencriptado);
 }
