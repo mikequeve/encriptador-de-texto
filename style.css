@@ -14,7 +14,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "Neuropol";
+  font-family: "Neuropol", sans-serif;
 }
 
 *,
@@ -59,6 +59,10 @@ main {
   color: #f3f5fc;
 }
 
+.none {
+  display: none;
+}
+
 .header {
   flex-direction: row;
   justify-content: space-between;
@@ -95,6 +99,14 @@ form article {
 .contenido form article textarea {
   width: 100%;
   max-width: 31rem;
+  background-color: #f3f5fc;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1rem;
+  resize: none;
+  min-height: 20rem;
+  font-family: sans-serif;
+  font-size: 1rem;
 }
 
 .procesar-texto {
@@ -107,20 +119,12 @@ form article {
   background-color: #f3f5fc;
 }
 
-textarea {
-  background-color: #f3f5fc;
-  border: none;
-  outline: none;
-  padding: 0.7rem 1rem;
-  resize: none;
-  min-height: 20rem;
-}
-
 textarea::placeholder {
   font-family: "Neuropol";
 }
 
-.ingresar-texto {
+.ingresar-texto,
+.procesar-texto {
   background-color: #f3f5fc;
   border-radius: 10px;
   padding: 1.5rem 0;
@@ -128,16 +132,6 @@ textarea::placeholder {
 
 .ingresar-texto > .button-container input:nth-child(1) {
   padding: 0.75rem 2.6rem;
-}
-
-.contenido .procesar-texto {
-  border-radius: 10px;
-  padding: 1rem 0;
-  background-color: #f3f5fc;
-}
-
-.texto-salida {
-  display: none;
 }
 
 .campo-vacio h2 {
@@ -151,14 +145,6 @@ textarea::placeholder {
   font-size: 0.7rem;
   color: #609ed4;
   text-wrap: balance;
-}
-
-.texto-salida.active {
-  display: block;
-}
-
-.texto-procesado.active .campo-vacio {
-  display: none;
 }
 
 .footer {
@@ -210,5 +196,9 @@ textarea::placeholder {
 
   form .ingresar-texto .button-container {
     margin-top: 1.3rem;
+  }
+
+  #btn-copiar {
+    margin-top: 2.2rem;
   }
 }

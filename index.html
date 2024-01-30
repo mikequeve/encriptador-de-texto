@@ -47,14 +47,21 @@
               id="texto-salida"
               cols="50"
               rows="10"
-              class="texto-salida"
+              class="texto-salida none"
+              readonly
             ></textarea>
             <aside class="campo-vacio center-alignment">
               <img src="assets/candado.svg" alt="icono de candado cerrado..." />
               <h2>ningún mensaje fue encontrado</h2>
               <p>ingrese el texto a encriptar / desencriptar</p>
             </aside>
-            <input type="button" value="copiar texto" class="btn" />
+            <input
+              onclick="copiarTexto();"
+              type="button"
+              value="copiar texto"
+              class="btn none"
+              id="btn-copiar"
+            />
           </article>
         </form>
       </section>
