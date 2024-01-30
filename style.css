@@ -173,9 +173,6 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 1024px) {
-  .header {
-    position: initial;
-  }
   .header .logo img {
     width: 8rem;
   }
