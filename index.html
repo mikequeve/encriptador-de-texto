@@ -19,7 +19,7 @@
           <article class="ingresar-texto center-alignment">
             <textarea
               name="texto"
-              id="texto-encriptar"
+              id="texto-entrada"
               cols="50"
               rows="10"
               placeholder="Ingrese el texto aqui..."
@@ -30,22 +30,24 @@
                 type="button"
                 value="encriptar"
                 class="btn"
+                id="btn-encriptar"
               />
               <input
                 onclick="desencriptarTexto();"
                 type="button"
                 value="desencriptar"
                 class="btn"
+                id="btn-desencriptar"
               />
             </aside>
           </article>
           <article class="procesar-texto center-alignment">
             <textarea
               name="texto"
-              id="texto-desencriptar"
+              id="texto-salida"
               cols="50"
               rows="10"
-              class="texto-procesado"
+              class="texto-salida"
             ></textarea>
             <aside class="campo-vacio center-alignment">
               <img src="assets/candado.svg" alt="icono de candado cerrado..." />

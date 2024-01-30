@@ -121,7 +121,7 @@ textarea::placeholder {
 .ingresar-texto {
   background-color: #f3f5fc;
   border-radius: 10px;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .ingresar-texto > .button-container input:nth-child(1) {
@@ -134,7 +134,7 @@ textarea::placeholder {
   background-color: #f3f5fc;
 }
 
-.texto-procesado {
+.texto-salida {
   display: none;
 }
 
@@ -151,7 +151,7 @@ textarea::placeholder {
   text-wrap: balance;
 }
 
-.texto-procesado.active {
+.texto-salida.active {
   display: block;
 }
 
