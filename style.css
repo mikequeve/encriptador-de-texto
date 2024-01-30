@@ -98,6 +98,7 @@ form article {
 }
 
 .procesar-texto {
+  min-height: 28.021rem;
   margin-top: 2rem;
 }
 
@@ -112,6 +113,7 @@ textarea {
   outline: none;
   padding: 0.7rem 1rem;
   resize: none;
+  min-height: 20rem;
 }
 
 textarea::placeholder {
@@ -121,7 +123,7 @@ textarea::placeholder {
 .ingresar-texto {
   background-color: #f3f5fc;
   border-radius: 10px;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .ingresar-texto > .button-container input:nth-child(1) {
