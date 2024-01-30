@@ -9,11 +9,11 @@ function valores(texto) {
 }
 
 function encriptarTexto() {
-  let $texto = d.querySelector("#texto-entrada").value.toLowerCase(),
+  let $texto = d.querySelector("#texto-entrada").value,
     textoCodificado = $texto
-      .replace(/a/gi, "ai")
       .replace(/e/gi, "enter")
       .replace(/i/gi, "imes")
+      .replace(/a/gi, "ai")
       .replace(/o/gi, "ober")
       .replace(/u/gi, "ufat");
   valores(textoCodificado);
@@ -29,11 +29,11 @@ function copiarTexto() {
 }
 
 function desencriptarTexto() {
-  let $textoCodificado = d.querySelector("#texto-entrada").value.toLowerCase(),
+  let $textoCodificado = d.querySelector("#texto-entrada").value,
     textoDesencriptado = $textoCodificado
-      .replace(/ai/gi, "a")
       .replace(/enter/gi, "e")
       .replace(/imes/gi, "i")
+      .replace(/ai/gi, "a")
       .replace(/ober/gi, "o")
       .replace(/ufat/gi, "u");
   valores(textoDesencriptado);
