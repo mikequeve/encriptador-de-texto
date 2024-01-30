@@ -19,16 +19,11 @@ function encriptarTexto() {
 }
 
 const copiarTexto = () => {
-  let $textoSalida = d.querySelector("#texto-salida").value;
-  console.log($textoSalida);
-  let input = d.createElement("input");
-  input.value = $textoSalida;
-  d.body.appendChild(input);
-  input.select();
+  let $textoSalida = d.querySelector("#texto-salida");
+  $textoSalida.select();
   document.execCommand("copy");
   alert("Texto Copiado...");
   d.querySelector("#texto-salida").value = "";
-  d.body.removeChild(input);
 };
 
 function desencriptarTexto() {
