@@ -24,8 +24,12 @@ html {
 }
 
 body {
+  min-height: 100vh;
   overflow-x: hidden;
   margin: 0;
+  background-image: url(assets/bg-principal.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .center-alignment {
@@ -70,11 +74,8 @@ body {
 
 .contenido {
   width: 100%;
-  min-height: 100vh;
+  max-width: 1280px;
   padding: 5rem 3%;
-  background-image: url(assets/bg-principal.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .contenido form,
@@ -105,6 +106,7 @@ textarea {
   border: none;
   outline: none;
   padding: 0.7rem 1rem;
+  resize: none;
 }
 
 textarea::placeholder {
@@ -123,7 +125,7 @@ textarea::placeholder {
 
 .contenido .procesar-texto {
   border-radius: 10px;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background-color: #f3f5fc;
 }
 
@@ -152,6 +154,43 @@ textarea::placeholder {
   display: none;
 }
 
+.footer {
+  width: 100%;
+  background-color: #0f0e0e;
+  color: #f3f5fc;
+  padding: 1rem 3%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
 .footer p {
   font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .button-container {
+    width: 100%;
+    flex-direction: row;
+  }
+  .button-container input {
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contenido form {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  form article {
+    width: 45%;
+    margin-inline: 1rem;
+    min-height: 25rem;
+  }
+
+  form article:nth-child(2) {
+    margin-top: initial;
+  }
 }
